@@ -2,7 +2,7 @@
 
 CREATE TABLE t_renata_belohlavkova_project_SQL_primary_final AS
 SELECT  
- 	  cpc.name AS goods_category,
+  cpc.name AS goods_category,
     cpc.price_value,
     cpc.price_unit,
     cp.value AS price,
