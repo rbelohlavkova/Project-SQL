@@ -33,7 +33,7 @@ Jako dodatečný materiál máme připravit i tabulku s HDP, GINI koeficientem a
 4)	Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
 5)	Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
 
-## 4) Výstupy z projektu jsou obsaženy v přiložených souborech:
+## 4) Výstupy z projektu jsou obsaženy v přiložených souborech
 
 <li>Renata_Belohlavkova_projekt_SQL_2024_11_04 – zadání a odpovědi na otázky
 <li>t_Renata_Belohlavkova_project_SQL_primary_final – vytvoření primární tabulky v SQL
