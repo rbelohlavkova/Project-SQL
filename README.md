@@ -35,7 +35,7 @@ Jako dodatečný materiál máme připravit i tabulku s HDP, GINI koeficientem a
 
 ## 4) Výstupy z projektu jsou obsaženy v přiložených souborech
 
-<li>Renata_Belohlavkova_projekt_SQL_2024_11_04 – zadání a odpovědi na otázky
+<li>Renata_Belohlavkova_project_SQL_2024_11_04 – zadání a odpovědi na otázky
 <li>t_Renata_Belohlavkova_project_SQL_primary_final – vytvoření primární tabulky v SQL
 <li>t_Renata_Belohlavkova_project_SQL_secondary_final – vytvoření sekundární tabulky v SQL
 <li>Renata_Belohlavkova_Questions_SQL – dotazy v SQL
