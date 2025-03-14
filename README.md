@@ -38,5 +38,5 @@ Jako dodatečný materiál máme připravit i tabulku s HDP, GINI koeficientem a
 <li>Renata_Belohlavkova_projekt_SQL_2024_11_04 – zadání a odpovědi na otázky
 <li>t_Renata_Belohlavkova_project_SQL_primary_final – vytvoření primární tabulky v SQL
 <li>t_Renata_Belohlavkova_project_SQL_secondary_final – vytvoření sekundární tabulky v SQL
-<li>Renata_Belohlavkova_Questons_SQL – dotazy v SQL
+<li>Renata_Belohlavkova_Questions_SQL – dotazy v SQL
 
