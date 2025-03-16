@@ -107,9 +107,9 @@ SELECT
 	avg(price) AS avg_price,
 	LAG (avg(price)) OVER (PARTITION BY goods_category ORDER BY year) AS previous_price,
 	CASE 
-        WHEN LAG(avg(price)) OVER (PARTITION BY goods_category ORDER BY year) IS NULL THEN NULL
-        ELSE ((avg(price) - LAG(avg(price)) OVER (PARTITION BY goods_category ORDER BY year)) / LAG(avg(price)) OVER (PARTITION BY goods_category ORDER BY "year")) * 100
-    END AS percentage_growth
+      	  WHEN LAG(avg(price)) OVER (PARTITION BY goods_category ORDER BY year) IS NULL THEN NULL
+       	  ELSE ((avg(price) - LAG(avg(price)) OVER (PARTITION BY goods_category ORDER BY year)) / LAG(avg(price)) OVER (PARTITION BY goods_category ORDER BY "year")) * 100
+        END AS percentage_growth
 FROM t_renata_belohlavkova_project_sql_primary_final
 GROUP BY goods_category, "year"
 ORDER BY goods_category, "year"
