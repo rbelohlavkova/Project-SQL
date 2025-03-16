@@ -17,7 +17,7 @@ ORDER BY ec.year;
 
 -- b) Dodatečná tabulka s HDP, GINI koeficientm a populace za Evropu 
 
-CREATE table t_renata_belohlavkova_project_SQL_other_data AS
+CREATE TABLE t_renata_belohlavkova_project_SQL_other_data AS
 SELECT
 	e.year, 
 	e.country, 
@@ -28,5 +28,5 @@ SELECT
 FROM economies e 
 JOIN countries c 
 	ON e.country = c.country 
-WHERE "year" BETWEEN 2006 AND 2018 AND continent = 'Europe' AND gini IS NOT NULL 
+WHERE e.year BETWEEN 2006 AND 2018 AND continent = 'Europe' AND gini IS NOT NULL 
 ORDER BY e.year, e.country;
