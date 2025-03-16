@@ -78,14 +78,14 @@ WITH avg_prices AS (
 ),
 price_difference AS (
 SELECT
-   	  "year",
+      "year",
       goods_category ,
       avg_price,
       LAG(avg_price) OVER (PARTITION BY goods_category ORDER BY year) AS previous_price 
 FROM avg_prices 
 )
 SELECT 
-	"year",
+    "year",
     goods_category,
     MIN(
         CASE
