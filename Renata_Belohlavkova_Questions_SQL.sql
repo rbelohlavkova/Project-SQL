@@ -62,8 +62,6 @@ WHERE goods_category IN ('Chléb konzumní kmínový', 'Mléko polotučné paste
 FROM t_renata_belohlavkova_project_sql_primary_final))
 GROUP BY goods_category, "year";
 
-
-
 /*
  * 3) Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
  */
@@ -100,11 +98,8 @@ FROM price_difference
 GROUP BY goods_category,"year"
 ORDER BY growth ASC;
 
-
-
 -- b) hledám kategorii, která má nejnižší průměr meziročního růstu za sledovaného období 
  
-
 WITH percentage_growth_data AS (
 SELECT 
 	year , 
@@ -127,9 +122,7 @@ WHERE percentage_growth IS NOT NULL
 GROUP BY goods_category
 ORDER BY geometric_growth ASC;
 
-
 -- 4) Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)? --
-
 
 SELECT 
  	"year",
@@ -169,14 +162,14 @@ JOIN czechia_payroll cpay
 JOIN czechia_price cp 
 	ON cpay.payroll_year = date_part ('year',cp.date_from)
 WHERE cpay.value_type_code = 5958 AND ec.country = 'Czech Republic' AND  cp.region_code IS NULL
-GROUP BY ec."year"
-ORDER BY year;
+GROUP BY ec.year
+ORDER BY ec.year;
 
 /* 
  *5) Má výška HDP vliv na změny ve mzdách a cenách potravin?
  */
  
-  SELECT 
+SELECT 
 	"year",
 	round((gdp_mld)::NUMERIC,2) AS hdp_mld,
 	round((avg_wages)::NUMERIC,0) AS wages,
@@ -189,7 +182,7 @@ FROM t_renata_belohlavkova_project_sql_secondary_final;
 
 -- Dodatečná tabulka s HDP, GINI koeficientm a populace za Evropu 
 
-CREATE table t_renata_belohlavkova_project_SQL_other_data AS
+CREATE TABLE t_renata_belohlavkova_project_SQL_other_data AS
 SELECT
 	e.year, 
 	e.country, 
@@ -200,7 +193,7 @@ SELECT
 FROM economies e 
 JOIN countries c 
 	ON e.country = c.country 
-WHERE "year" BETWEEN 2006 AND 2018 AND continent = 'Europe' AND gini IS NOT NULL 
+WHERE e.year BETWEEN 2006 AND 2018 AND continent = 'Europe' AND gini IS NOT NULL 
 ORDER BY e.year, e.country;
 
 
