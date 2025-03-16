@@ -1,4 +1,4 @@
- --a) Vytvoření sekundární tabulky pro ČR 
+ -- Vytvoření sekundární tabulky pro ČR 
   
  CREATE TABLE t_renata_belohlavkova_project_SQL_secondary_final AS
 SELECT 
