@@ -1,6 +1,6 @@
- -- Vytvoření sekundární tabulky pro ČR 
+ -- a) Vytvoření sekundární tabulky pro ČR 
   
- CREATE TABLE t_renata_belohlavkova_project_SQL_secondary_final AS
+CREATE TABLE t_renata_belohlavkova_project_SQL_secondary_final AS
 SELECT 
 	ec.year,
 	avg(cpay.value) AS avg_wages ,
@@ -12,8 +12,8 @@ JOIN czechia_payroll cpay
 JOIN czechia_price cp 
 	ON cpay.payroll_year = date_part ('year',cp.date_from)
 WHERE cpay.value_type_code = 5958 AND ec.country = 'Czech Republic' AND  cp.region_code IS NULL
-GROUP BY ec."year"
-ORDER BY year;
+GROUP BY ec.year
+ORDER BY ec.year;
 
 -- b) Dodatečná tabulka s HDP, GINI koeficientm a populace za Evropu 
 
